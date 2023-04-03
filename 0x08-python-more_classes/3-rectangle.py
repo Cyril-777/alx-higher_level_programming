@@ -92,21 +92,15 @@ class Rectangle:
         Returns a string representation of the rectangle.
 
         Returns:
-            str: A string representation of the rectangle.
+            recstr: A string representation of the rectangle.
         """
-        if self._width == 0 or self._height == 0:
-            return ''
-        else:
-            rectangle_str = ''
-            for i in range(self._height):
-                rectangle_str += '#' * self._width + '\n'
-            return rectangle_str
 
-    def __repr__(self):
-        """
-        Returns a string representation of the rectangle.
+        recstr = ""
 
-        Returns:
-            str: A string representation of the rectangle.
+        if self.width == 0 or self.height == 0:
+            return recstr
 
-        return statement"""
+        for i in range(self.height):
+            recstr += ("#" * self.width) + "\n"
+
+        return recstr[:-1]
