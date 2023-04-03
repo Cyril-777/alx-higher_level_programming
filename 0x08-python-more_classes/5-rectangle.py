@@ -104,7 +104,7 @@ class Rectangle:
             recstr += ("#" * self.width) + "\n"
 
         return recstr[:-1]
-    
+
     def __repr__(self):
         """ Method that returns the string represantion of the instance
         Returns:
@@ -112,7 +112,7 @@ class Rectangle:
         """
 
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
-    
+
     def __del__(self):
         """
         Deletes the current instance of the rectangle and prints a message.
