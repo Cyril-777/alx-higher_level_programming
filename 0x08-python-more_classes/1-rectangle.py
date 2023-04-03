@@ -3,18 +3,10 @@
 
 
 class Rectangle:
-    """
-    A class that defines a rectangle.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-    """
+    """ A class that defines a rectangle """
 
     def __init__(self, width=0, height=0):
-        """
-        Initializes a new instance of the Rectangle class.
-
+        """Initializes a new instance of the Rectangle class.
         Args:
             width (int): The width of the rectangle. Defaults to 0.
             height (int): The height of the rectangle. Defaults to 0.
@@ -24,18 +16,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        Retrieves the width of the rectangle.
-
-        Returns:
-            int: The width of the rectangle.
-        """
+        """Retrieves the width of the rectangle."""
         return self._width
 
     @width.setter
     def width(self, value):
-        """
-        Sets the width of the rectangle.
+        """Sets the width of the rectangle.
 
         Args:
             value (int): The new width of the rectangle.
@@ -53,9 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Retrieves the height of the rectangle.
-
+        """Retrieves the height of the rectangle
         Returns:
             int: The height of the rectangle.
         """
@@ -63,8 +47,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """
-        Sets the height of the rectangle.
+        """Sets the height of the rectangle.
 
         Args:
             value (int): The new height of the rectangle.
