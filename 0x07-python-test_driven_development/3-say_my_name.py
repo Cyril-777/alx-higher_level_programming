@@ -8,7 +8,9 @@ def say_my_name(first_name, last_name=""):
 
     Args:
         first_name (str): The first name to be included in the message.
-        last_name (str, optional): The last name to be included in the message. Defaults to "".
+        last_name (str, optional): The last name to
+        be included in the message.
+        Defaults to "".
 
     Raises:
         TypeError: If first_name or last_name is not a string.
