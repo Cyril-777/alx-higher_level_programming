@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""function that prints a text with 2 new lines after each of these characters: ., ? and :"""
+"""function that prints a text with 2 new lines after each
+of these characters: ., ? and :"""
 
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each of the characters ".", "?" and ":"
+    Prints a text with 2 new lines after each
+    of the characters ".", "?" and ":"
 
     Args:
         text (str): The text to be indented.
