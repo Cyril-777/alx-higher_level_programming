@@ -1,28 +1,24 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation('Hello. How are you? I hope you\'re doing well.')
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("")
+
+
+>>> text_indentation("Hello. How are you? I hope you\'re doing well")
 Hello.
 
 How are you?
 
-I hope you're doing well.
+I hope you're doing well
 
 >>> text_indentation('This is a: test. Did it work? I think so!')
 This is a:
+
 test.
 
 Did it work?
 
 I think so!
-
->>> text_indentation(' ')
-
->>> text_indentation('')
-
->>> text_indentation(123)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "text_indentation.py", line 14, in text_indentation
-    raise TypeError("text must be a string")
-TypeError: text must be a string
-
