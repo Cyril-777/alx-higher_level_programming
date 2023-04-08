@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Unittest for max_integer function
+"""Unittest for max_integer([..])
 """
-
 
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 
-class myfirsteverunittestsclassimsoexcitedomg(unittest.TestCase):
+class TestMaxInteger(unittest.TestCase):
+    """Define unittests"""
+
     def test_empty(self):
         """Test the function when an empty list is passed as input.
 
