@@ -2,11 +2,13 @@
 """Unittest for max_integer function
 """
 
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 
 class myfirsteverunittestsclassimsoexcitedomg(unittest.TestCase):
+
     def test_empty(self):
         self.assertIsNone(max_integer())
 
@@ -36,6 +38,7 @@ class myfirsteverunittestsclassimsoexcitedomg(unittest.TestCase):
 
     def test_none(self):
         self.assertRaises(TypeError, max_integer, [None])
+
 
 if __name__ == '__main__':
     unittest.main()
