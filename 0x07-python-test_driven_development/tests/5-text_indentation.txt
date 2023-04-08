@@ -22,3 +22,23 @@ test.
 Did it work?
 
 I think so!
+
+>>> text_indentation("This is a sentence. Another sentence? And a third sentence: Final sentence.")
+This is a sentence.
+ 
+Another sentence?
+ 
+And a third sentence:
+ 
+Final sentence.
+ 
+>>> text_indentation("This is a sentence")
+This is a sentence
+ 
+>>> text_indentation("")
+ 
+>>> try:
+...     text_indentation(123)
+... except TypeError as e:
+...     print(e)
+text must be a string
