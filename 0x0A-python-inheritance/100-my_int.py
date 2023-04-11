@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 rebel class MyInt that inherits from int
 and inverts operations!
@@ -11,14 +11,14 @@ class MyInt(int):
     and != operators.
     """
 
-    def __eq__(self, value):
+    def __eq__(self, other):
         """
         Overrides the == operator.
         """
-        return self.real != value
+        return super().__ne__(other)
 
-    def __ne__(self, value):
+    def __ne__(self, other):
         """
         Overrides the != operator.
         """
-        return self.real == value
+        return super().__eq__(other)
