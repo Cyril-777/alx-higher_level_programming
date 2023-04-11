@@ -11,14 +11,14 @@ class MyInt(int):
     and != operators.
     """
 
-    def __eq__(self, other):
+    def __eq__(self, value):
         """
         Overrides the == operator.
         """
-        return super().__ne__(other)
+        return self.real != value
 
-    def __ne__(self, other):
+    def __ne__(self, value):
         """
         Overrides the != operator.
         """
-        return super().__eq__(other)
+        return self.real == value
