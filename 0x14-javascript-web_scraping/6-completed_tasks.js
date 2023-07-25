@@ -3,21 +3,22 @@
 const request = require('request');
 const url = process.argv[2];
 
-request.get(url, { json: true }, (err, response, body) => {
+request(url, function (err, response, body) {
   if (err) {
-    console.log('error:', err);
-    return;
-  }
-
-  const tasksCompleted = {};
-  body.forEach((todo) => {
-    if (todo.completed) {
-      if (!tasksCompleted[todo.userId]) {
-        tasksCompleted[todo.userId] = 1;
-      } else {
-        tasksCompleted[todo.userId] += 1;
+    console.log(err);
+  } else if (response.statusCode === 200) {
+    const completed = {};
+    const tasks = JSON.parse(body);
+    for (const i in tasks) {
+      const task = tasks[i];
+      if (task.completed === true) {
+        if (completed[task.userId] === undefined) {
+          completed[task.userId] = 1;
+        } else {
+          completed[task.userId]++;
+        }
       }
     }
-  });
-  console.log(tasksCompleted);
+    console.log(completed);
+  }
 });
