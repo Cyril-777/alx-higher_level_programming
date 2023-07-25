@@ -4,7 +4,6 @@ const request = require('request');
 const url = process.argv[2];
 
 request(url, (error, response, body) => {
-
   if (error) {
     console.error('error:', error);
     return;
@@ -14,16 +13,15 @@ request(url, (error, response, body) => {
 
   const completedTasks = {};
 
-  for(let todo of todos) {
+  for (const todo of todos) {
     if (todo.completed) {
       const userId = todo.userId.toString();
       if (!completedTasks[userId]) {
         completedTasks[userId] = 0;
       }
-      completedTasks[userId]++; 
+      completedTasks[userId]++;
     }
   }
 
   console.log(completedTasks);
-
 });
